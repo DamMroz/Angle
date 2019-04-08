@@ -1,11 +1,11 @@
-import numpy as np # Import all necessary modules
+import numpy as np # Import all necessary modules.
 import math
 from numpy.linalg import inv
 from numpy import linalg as LA
 from numpy import (array, dot, arccos, clip)
 from numpy.linalg import norm
-ath=10.456788 # Lattice parameters and angles of the unit cell must be provided
-ath=float(ath) # Conversion to float
+ath=10.456788 # Lattice parameters and angles of the unit cell must be provided.
+ath=float(ath) # Conversion to float.
 btha=10.456788 
 btha=float(btha)
 cth=11.769562 
@@ -30,10 +30,10 @@ betaex=90.000000
 betaex=float(betaex)
 gammaex=90.00 
 gammaex=float(gammaex)
-ascal=1.0 # Scaling factor for further manipulation; 1 is the default
+ascal=1.0 # Scaling factor for further manipulation; 1 is the default.
 
  
-y = sum(1 for line in open('inpex.txt'))# Input is read in
+y = sum(1 for line in open('inpex.txt'))# Input is read in.
 for x in range (0,y):
 
  arrayex = [np.array(map(str,line.split())) for line in open('inpex.txt')] # Input is stored in an array. The experimental aprt is given in inpex.txt and the theoretical counterpart in inpth.txt.
@@ -94,7 +94,7 @@ for x in range (0,y):
  angle7 = arccos(clip(c7, -1, 1)) 
  angle8 = arccos(clip(c8, -1, 1)) 
  angle9 = arccos(clip(c9, -1, 1)) 
- Volth=(1/(math.sqrt(abs(wth[0]))))*(1/(math.sqrt(abs(wth[1]))))*(1/(math.sqrt(abs(wth[2]))))# Ellipsoid volume is calculated,
+ Volth=(1/(math.sqrt(abs(wth[0]))))*(1/(math.sqrt(abs(wth[1]))))*(1/(math.sqrt(abs(wth[2]))))# Ellipsoid volume is calculated.
  Volex=(1/(math.sqrt(abs(wex[0]))))*(1/(math.sqrt(abs(wex[1]))))*(1/(math.sqrt(abs(wex[2]))))
  Volver=Volth/Volex# Ratio of the volumes.
  Vectorth=np.array([[1/ath,-(np.cos(gammath*np.pi/180.0))/(ath*np.sin(gammath*np.pi/180.0)),(btha*cth*(np.cos(alphath*np.pi/180.0)*np.cos(gammath*np.pi/180.0)-np.cos(betath*np.pi/180.0)))/(np.sin(gammath*np.pi/180.0)*ath*btha*cth*np.sqrt(1-np.cos(alphath*np.pi/180.0)*np.cos(alphath*np.pi/180.0)-np.cos(betath*np.pi/180.0)*np.cos(betath*np.pi/180.0)-np.cos(gammath*np.pi/180.0)*np.cos(gammath*np.pi/180.0)+2*np.cos(alphath*np.pi/180.0)*np.cos(betath*np.pi/180.0)*np.cos(gammath*np.pi/180.0)))],[0,1/(btha*np.sin(gammath*np.pi/180.0)),ath*cth*(np.cos(betath*np.pi/180.0)*np.cos(gammath*np.pi/180.0)-np.cos(alphath*np.pi/180.0))/(np.sin(gammath*np.pi/180.0)*ath*btha*cth*np.sqrt(1-np.cos(alphath*np.pi/180.0)*np.cos(alphath*np.pi/180.0)-np.cos(betath*np.pi/180.0)*np.cos(betath*np.pi/180.0)-np.cos(gammath*np.pi/180.0)*np.cos(gammath*np.pi/180.0)+2*np.cos(alphath*np.pi/180.0)*np.cos(betath*np.pi/180.0)*np.cos(gammath*np.pi/180.0)))],[0,0,(ath*btha*np.sin(gammath*np.pi/180.0))/(ath*btha*cth*np.sqrt(1-np.cos(alphath*np.pi/180.0)*np.cos(alphath*np.pi/180.0)-np.cos(betath*np.pi/180.0)*np.cos(betath*np.pi/180.0)-np.cos(gammath*np.pi/180.0)*np.cos(gammath*np.pi/180.0)+2*np.cos(alphath*np.pi/180.0)*np.cos(betath*np.pi/180.0)*np.cos(gammath*np.pi/180.0)))]]) # Transformation vector to crystallograhic system is defined.
