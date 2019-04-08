@@ -13,4 +13,13 @@ In addition to this, you should cite [MolecularToolbox](https://github.com/JaGeo
 You can directly run the python script, but you will need `numpy`.
 
 # How to
-You have to perform DFT calculations for example with [VASP](https://www.vasp.at/) first, followed by phonon evaluation (e.g. [Phonopy](https://github.com/atztogo/phonopy). Furthermore, you need to transform the thermal displacement matrices ([Phonopy](https://github.com/atztogo/phonopy) output) to the "Ustar" format. You can use the [MolecularToolbox](https://github.com/JaGeo/MolecularToolbox) to obtain the Ustar values directly from [Phonopy](https://github.com/atztogo/phonopy).
+You have to perform DFT calculations for example with [VASP](https://www.vasp.at/) first, followed by phonon evaluation (e.g. [Phonopy](https://github.com/atztogo/phonopy). Furthermore, you need to transform the thermal displacement matrices ([Phonopy](https://github.com/atztogo/phonopy) output) to the "Ustar" format. You can use the [MolecularToolbox](https://github.com/JaGeo/MolecularToolbox) to obtain the Ustar values directly from [Phonopy](https://github.com/atztogo/phonopy). Then you just need to prepare the input filex "inpex.txt" and "inpth.txt" as shown in the Examples.
+
+# Result
+You will get a list with the eigenvectors and corresponding angles.
+
+# Information about the Author
+..*D. Mroz (RWTH Aachen University)
+--*PI during the development of the code: R. Dronskowski, RWTH Aachen University
+
+
