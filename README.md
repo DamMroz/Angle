@@ -19,7 +19,7 @@ You have to perform DFT calculations for example with [VASP](https://www.vasp.at
 You will get a list with the eigenvectors and corresponding angles.
 
 # Information about the Author
-..*D. Mroz (RWTH Aachen University)
---*PI during the development of the code: R. Dronskowski, RWTH Aachen University
+⋅⋅*D. Mroz (RWTH Aachen University)
+⋅⋅*PI during the development of the code: R. Dronskowski, RWTH Aachen University
 
 
