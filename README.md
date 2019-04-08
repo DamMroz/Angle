@@ -5,4 +5,4 @@ This python program is used to determine the angles and therefore the agreement 
 For this you will need DFT-programs, such as [VASP](https://www.vasp.at/) and a phonon-code, such as [Phonopy](https://github.com/atztogo/phonopy).
 
 # What to cite
-Please cite this repsoitory: Damian Mroz, & Richard Dronskowski. (2019, April 08). Angle(Version 1.0). 
+Please cite this repsoitory: Damian Mroz, & Richard Dronskowski. (2019, April 08). Angle (Version 1.0). 
