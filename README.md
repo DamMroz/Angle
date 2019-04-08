@@ -9,3 +9,4 @@ Please cite this repsoitory: Damian Mroz, & Richard Dronskowski. (2019, April 08
 If used, please also cite [VASP](https://www.vasp.at/) and  [Phonopy](https://github.com/atztogo/phonopy).
 
 # Installation
+You can directly run the python script, but you will need numpy.
