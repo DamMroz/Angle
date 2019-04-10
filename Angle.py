@@ -102,7 +102,7 @@ for x in range (0,y):
  h = open('out.txt', 'a')
  if Aexmax/Aexmin>1.6:
    print>>h, "Anisotropic", arrayex[0], Aexmax/Aexmin,"Experiment1",np.matmul(Vectorexp,uex1),wex[0], "Experiment2",(np.matmul(Vectorexp,uex2)),wex[1],"Experiment3",(np.matmul(Vectorexp,uex3)),wex[2],"Theory1",(np.matmul(Vectorth,uth1)),wth[0],"Theory2",(np.matmul(Vectorth,uth2)),wth[1],"Theory3",(np.matmul(Vectorth,uth3)),wth[2]
- print>>h, arrayex[0],"Verhaltnis",Volver,"Angle",  "(11)",angle1*57.296, "(22)",angle5*57.296, "(33)",angle9*57.296, "(12)",angle2*57.296, "(21)",angle4*57.296,  "(13)",angle3*57.296,  "(32)",angle8*57.296
+ print>>h, arrayex[0],"Ratio",Volver,"Angle",  "(11)",angle1*57.296, "(22)",angle5*57.296, "(33)",angle9*57.296, "(12)",angle2*57.296, "(21)",angle4*57.296,  "(13)",angle3*57.296,  "(32)",angle8*57.296
  print>>h,  "(23)", angle6*57.296, "(31)", angle7*57.296 # Angles are given in degrees; format is experiment theory (12 for example means experiment 1, theory 2). Anisotropic ellipsoids are highlighted. The vectors are transformed to the crystallographic coordinate system.
  
  
