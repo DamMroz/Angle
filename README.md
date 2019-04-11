@@ -7,7 +7,7 @@ For this you will need DFT-programs, such as [VASP](https://www.vasp.at/) and a 
 # What to cite
 Please cite this repository: Damian Mroz, Janine George,& Richard Dronskowski. (2019, April 08). Angle (Version 1.0).
 If used, please also cite [VASP](https://www.vasp.at/) and [Phonopy](https://github.com/atztogo/phonopy).
-In addition to this, you should cite [MolecularToolbox](https://github.com/JaGeo/MolecularToolbox) if used. In this case please cite: Janine George, & Richard Dronskowski. (2017, November 30). Please follow the citation guidelines on the corresponding repository.
+In addition to this, you should cite [MolecularToolbox](https://github.com/JaGeo/MolecularToolbox) if used. Please follow the citation guidelines on the this repository.
 
 # Installation
 You can directly run the python script, but you will need `numpy` and `math`.
