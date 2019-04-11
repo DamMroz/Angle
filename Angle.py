@@ -16,14 +16,14 @@ class AngleClass:
         :param bexa: b parameter experimental structure
         :param cex: c parameter experimental structure
         :param alphaex: alpha parameter experimental structure
-        :param betaex: beta parameter experimental strucutre
+        :param betaex: beta parameter experimental structure
         :param gammaex: gamma parameter experimental structure
         :param ath: a parameter computed structure
         :param btha: b parameter computed structure
         :param cth: c parameter computed structure
         :param alphath: alpha parameter computed structure
         :param betath: beta parameter computed structure
-        :param gammath: gamma paramter computed structure
+        :param gammath: gamma parameter computed structure
         :param n: TODO: fill this in
         :param filename_Ustar_experiment: filename of Ustar parameters of experimental ADPs
         :param filename_Ustar_theory: filename of Ustar parameters of theoretical ADPs
