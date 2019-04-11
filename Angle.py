@@ -130,13 +130,13 @@ class AngleClass:
                           dictionary["wex"][2], "Theory1", dictionary["new_cth1"], dictionary["wth"][0], "Theory2",
                           dictionary["new_cth2"], dictionary["wth"][1], "Theory3", dictionary["new_cth3"],
                           dictionary["wth"][2], file=f)
-                    print(dictionary["atomname"], "Ratio", dictionary["Ratio"], "Angle", "(11)",
-                          dictionary["angle1"] * 57.296, "(22)", dictionary["angle5"] * 57.296, "(33)",
-                          dictionary["angle9"] * 57.296, "(12)", dictionary["angle2"] * 57.296, "(21)",
-                          dictionary["angle4"] * 57.296, "(13)", dictionary["angle3"] * 57.296, "(32)",
-                          dictionary["angle8"] * 57.296, file=f)
-                    print("(23)", dictionary["angle6"] * 57.296, "(31)", dictionary["angle7"] * 57.296,
-                          file=f)  # Angles are given in degrees; format is experiment theory (12 for example means experiment 1, theory 2). Anisotropic ellipsoids are highlighted. The vectors are transformed to the crystallographic coordinate system.
+                print(dictionary["atomname"], "Ratio", dictionary["Ratio"], "Angle", "(11)",
+                    dictionary["angle1"] * 57.296, "(22)", dictionary["angle5"] * 57.296, "(33)",
+                    dictionary["angle9"] * 57.296, "(12)", dictionary["angle2"] * 57.296, "(21)",
+                    dictionary["angle4"] * 57.296, "(13)", dictionary["angle3"] * 57.296, "(32)",
+                    dictionary["angle8"] * 57.296, file=f)
+                print("(23)", dictionary["angle6"] * 57.296, "(31)", dictionary["angle7"] * 57.296,
+                    file=f)  # Angles are given in degrees; format is experiment theory (12 for example means experiment 1, theory 2). Anisotropic ellipsoids are highlighted. The vectors are transformed to the crystallographic coordinate system.
 
     def _get_number_atoms(self, filename):
         return sum(1 for line in open(filename) if line != '\n')
