@@ -10,7 +10,7 @@ If used, please also cite [VASP](https://www.vasp.at/) and [Phonopy](https://git
 In addition to this, you should cite [MolecularToolbox](https://github.com/JaGeo/MolecularToolbox) if used. Please follow the citation guidelines on the this repository.
 
 # Installation
-You can directly run the python script, but you will need `numpy` and `math`.
+You will need to export the python path of the folder including the "Angle.py" file or copy it to the folder where you run the script. Furthermore, you will need `numpy` and `math`.
 
 # How to
 You have to perform DFT calculations for example with [VASP](https://www.vasp.at/) first, followed by phonon evaluation (e.g. [Phonopy](https://github.com/atztogo/phonopy)). Furthermore, you need to transform the thermal displacement matrices ([Phonopy](https://github.com/atztogo/phonopy) output) to the "Ustar" format. You can use the [MolecularToolbox](https://github.com/JaGeo/MolecularToolbox) to obtain the Ustar values directly from [Phonopy](https://github.com/atztogo/phonopy).
