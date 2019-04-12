@@ -36,7 +36,6 @@ angle = AngleClass(ath=ath, btha=btha, cth=cth, alphath=alphath, betath=betath, 
                    filename_Ustar_experiment=filename_Ustar_experiment, filename_Ustar_theory=filename_Ustar_theory)
 
 # This will print an output file
-# TODO: please describe the file in the comment part of the function to generate it!
 angle.print_outputfile("out.txt")
 
 # This will print files including main axis components.
