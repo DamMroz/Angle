@@ -7,7 +7,7 @@ For this you will need DFT-programs, such as [VASP](https://www.vasp.at/) and a 
 # What to cite
 Please cite this repository: Damian Mroz, Janine George,& Richard Dronskowski. (2019, April 08). Angle (Version 1.0).
 If used, please also cite [VASP](https://www.vasp.at/) and [Phonopy](https://github.com/atztogo/phonopy).
-In addition to this, you should cite [MolecularToolbox](https://github.com/JaGeo/MolecularToolbox) if used. Please follow the citation guidelines on the this repository.
+In addition to this, you should cite [MolecularToolbox](https://github.com/JaGeo/MolecularToolbox) if used. Please follow the citation guidelines on this repository.
 
 # Installation
 You will need to export the python path of the folder including the "Angle.py" file or copy it to the folder where you run the script. Furthermore, you will need `numpy` and `math`.
@@ -17,7 +17,7 @@ You have to perform DFT calculations for example with [VASP](https://www.vasp.at
 Then you just need to prepare the input files "inpex.txt" and "inpth.txt" as shown in the `Example` folder. These files include the matrix components of Ustar which can be derived with the help of the [MolecularToolbox](https://github.com/JaGeo/MolecularToolbox). Please make sure that the Ustar parameters are sorted in the correct way: E11 E22 E33 E23 E13 E12.
 
 # Result
-You will get three output files: Two of them will give you the main axis components of the ADPs. The other one will give you the lengths and angles of the main axes.
+You will get three output files: Two of them will give you the main axis components of the ADPs. The other one will give you a quantity related to the length of the semi principal axes and angles between the theoretical and experimental main axes.
 
 # Information about the Authors
 * D. Mroz (RWTH Aachen University)
