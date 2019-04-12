@@ -8,7 +8,7 @@ import math
 
 class AngleClass:
 
-    def __init__(self, aex, bexa, cex, alphaex, betaex, gammaex, ath, btha, cth, alphath, betath, gammath, n,
+    def __init__(self, aex, bexa, cex, alphaex, betaex, gammaex, ath, btha, cth, alphath, betath, gammath,
                  filename_Ustar_experiment, filename_Ustar_theory, ascal=1.0):
         """
 
@@ -24,7 +24,6 @@ class AngleClass:
         :param alphath: alpha parameter computed structure
         :param betath: beta parameter computed structure
         :param gammath: gamma parameter computed structure
-        :param n: this parameter introduces the number 0 as a float
         :param filename_Ustar_experiment: filename of Ustar parameters of experimental ADPs
         :param filename_Ustar_theory: filename of Ustar parameters of theoretical ADPs
         :param ascal:  if desired, the theoretical ADPs can be scaled to better fit the experimental counterparts. 
@@ -50,10 +49,8 @@ class AngleClass:
 
             # get Ucart:
             Aex22 = self._calculate_Ucart(ath=aex, btha=bexa, cth=cex, alphath=alphaex, betath=betaex, gammath=gammaex,
-                                          n=n,
                                           Ath=Aex)
             Ath22 = self._calculate_Ucart(ath=ath, btha=btha, cth=cth, alphath=alphath, betath=betath, gammath=gammath,
-                                          n=n,
                                           Ath=Ath)
 
             # get sorted eigenvalues from Ucart matrix
@@ -120,14 +117,14 @@ class AngleClass:
 
     def print_outputfile(self, filename="out.txt"):
         """
-      
-        The file "out.txt" prints sufficiently anisotropic ellipsoids with the remark "Anisotropic"
-        followed by the atom name and the ratio between the largest and smallest main axis component.
-        The next set is comprised of three experimental eigenvectors, each followed by the corresponding eigenvalue.
+        This will print the first output file
+        In the file "out.txt", sufficiently anisotropic ellipsoids will be marked with "Anisotropic". This will be
+        followed by the atom name and the ratio between the largest and smallest main axis components.
+        The next set is comprised of three experimental eigenvectors of the inverse matrix of Ucart, each followed by the corresponding eigenvalue.
         In analogy, the same is done for the theory.
-        The next information is the ratio between the theoretical and experimental ellipsoid volumes.
-        The nex part is the angles between all possible permutations of experimental and theoretical eigenvectors. 
-        The first numer denotes the experimental eigenvector and the second number denoters the theoretical eigenvector.
+        The next information after "Ratio" is the ratio between the theoretical and experimental ellipsoid volumes.
+        The next part after "Angle" includes the angles between all possible permutations of experimental and theoretical eigenvectors.
+        The first number denotes the experimental eigenvector and the second number denotes the theoretical eigenvector.
         For example, (12) would mean first experimental eigenvector matched with the second theoretical eigenvector.
         :param filename: filename of the output file
         """
@@ -141,12 +138,12 @@ class AngleClass:
                           dictionary["new_cth2"], dictionary["wth"][1], "Theory3", dictionary["new_cth3"],
                           dictionary["wth"][2], file=f)
                 print(dictionary["atomname"], "Ratio", dictionary["Ratio"], "Angle", "(11)",
-                    dictionary["angle1"] * 57.296, "(22)", dictionary["angle5"] * 57.296, "(33)",
-                    dictionary["angle9"] * 57.296, "(12)", dictionary["angle2"] * 57.296, "(21)",
-                    dictionary["angle4"] * 57.296, "(13)", dictionary["angle3"] * 57.296, "(32)",
-                    dictionary["angle8"] * 57.296, file=f)
+                      dictionary["angle1"] * 57.296, "(22)", dictionary["angle5"] * 57.296, "(33)",
+                      dictionary["angle9"] * 57.296, "(12)", dictionary["angle2"] * 57.296, "(21)",
+                      dictionary["angle4"] * 57.296, "(13)", dictionary["angle3"] * 57.296, "(32)",
+                      dictionary["angle8"] * 57.296, file=f)
                 print("(23)", dictionary["angle6"] * 57.296, "(31)", dictionary["angle7"] * 57.296,
-                    file=f)  # Angles are given in degrees; format is experiment theory (12 for example means experiment 1, theory 2). Anisotropic ellipsoids are highlighted. The vectors are transformed to the crystallographic coordinate system.
+                      file=f)  # Angles are given in degrees; format is experiment theory (12 for example means experiment 1, theory 2). Anisotropic ellipsoids are highlighted. The vectors are transformed to the crystallographic coordinate system.
 
     def _get_number_atoms(self, filename):
         return sum(1 for line in open(filename) if line != '\n')
@@ -171,8 +168,8 @@ class AngleClass:
                     atom = splitline[0]
         return atom
 
-    def _get_transformation_matrix_to_Cartesian_CS(self, ath, btha, cth, alphath, betath, gammath, n):
-
+    def _get_transformation_matrix_to_Cartesian_CS(self, ath, btha, cth, alphath, betath, gammath):
+        n = 0.0
         B2th = np.array([[ath, btha * (np.cos(gammath * np.pi / 180.0)), cth * np.cos(betath * np.pi / 180.0)],
                          [n, btha * np.sin(gammath * np.pi / 180.0), cth * ((
                                  np.cos(alphath * np.pi / 180.0) - (np.cos(betath * np.pi / 180.0)) * np.cos(
@@ -186,9 +183,9 @@ class AngleClass:
 
         return B2th
 
-    def _calculate_Ucart(self, ath, btha, cth, alphath, betath, gammath, n, Ath):
+    def _calculate_Ucart(self, ath, btha, cth, alphath, betath, gammath, Ath):
         B2th = self._get_transformation_matrix_to_Cartesian_CS(ath=ath, btha=btha, cth=cth, alphath=alphath,
-                                                               betath=betath, gammath=gammath, n=n)
+                                                               betath=betath, gammath=gammath)
 
         Mth = np.transpose(B2th)  # The matrix is transposed.
         Ath2 = np.matmul(B2th, Ath)
