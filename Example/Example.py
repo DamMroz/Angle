@@ -7,8 +7,7 @@ from Angle import AngleClass
 ath = 10.456788
 btha = 10.456788
 cth = 11.769562
-#TODO: what does this parameter do?
-#Please describe it
+# This parameter introduces the number 0 as a float.
 n = 0.0
 alphath = 90.000000
 betath = 90.000000
@@ -22,8 +21,8 @@ alphaex = 90.00
 betaex = 90.000000
 gammaex = 90.00
 
-# TODO: Description is needed!
-# What does this paper do?
+# If desired, the theoretical ADPs can be scaled to better fit the experimental counterparts. This can be useful 
+# for comparisons. 1 is the default and therefore no scaling.
 ascal = 1.0
 
 # Then, files including Ustar parameters have to be provided
@@ -40,6 +39,16 @@ angle = AngleClass(ath=ath, btha=btha, cth=cth, alphath=alphath, betath=betath, 
 # TODO: please describe the file in the comment part of the function to generate it!
 angle.print_outputfile("out.txt")
 
-# This will print files including main axis components
+# This will print files including main axis components.
+# The file "outth.txt" contains the atom and the corresponding main axis components in the Cartesian coordinate system.
+# In analogy, the same happens for "outexp.txt"
+# The file "out.txt" prints sufficiently anisotropic ellipsoids with the remark "Anisotropic"
+# followed by the atom name and the ratio between the largest and smallest main axis component.
+# The next set is comprised of three experimental eigenvectors, each followed by the corresponding eigenvalue.
+# In analogy, the same is done for the theory.
+# The next information is the ratio between the theoretical and experimental ellipsoid volumes.
+# The nex part is the angles between all possible permutations of experimental and theoretical eigenvectors. 
+# The first numer denotes the experimental eigenvector and the second number denoters the theoretical eigenvector.
+# For example, (12) would mean first experimental eigenvector matched with the second theoretical eigenvector.
 angle.print_main_axis_components_file("outexp.txt", option="experiment")
 angle.print_main_axis_components_file("outth.txt", option="theory")
