@@ -24,10 +24,12 @@ class AngleClass:
         :param alphath: alpha parameter computed structure
         :param betath: beta parameter computed structure
         :param gammath: gamma parameter computed structure
-        :param n: TODO: this parameter introduces the number 0 as a float
+        :param n: this parameter introduces the number 0 as a float
         :param filename_Ustar_experiment: filename of Ustar parameters of experimental ADPs
         :param filename_Ustar_theory: filename of Ustar parameters of theoretical ADPs
-        :param ascal: TODO: fill this in
+        :param ascal:  if desired, the theoretical ADPs can be scaled to better fit the experimental counterparts. 
+                       This can be useful for comparisons. 1 is the default and therefore no scaling.
+       
         """
         number_atoms_theory = self._get_number_atoms(filename_Ustar_theory)
         number_atoms_experiment = self._get_number_atoms(filename_Ustar_experiment)
