@@ -120,7 +120,15 @@ class AngleClass:
 
     def print_outputfile(self, filename="out.txt"):
         """
-        TODO: please describe the output file
+      
+        The file "out.txt" prints sufficiently anisotropic ellipsoids with the remark "Anisotropic"
+        followed by the atom name and the ratio between the largest and smallest main axis component.
+        The next set is comprised of three experimental eigenvectors, each followed by the corresponding eigenvalue.
+        In analogy, the same is done for the theory.
+        The next information is the ratio between the theoretical and experimental ellipsoid volumes.
+        The nex part is the angles between all possible permutations of experimental and theoretical eigenvectors. 
+        The first numer denotes the experimental eigenvector and the second number denoters the theoretical eigenvector.
+        For example, (12) would mean first experimental eigenvector matched with the second theoretical eigenvector.
         :param filename: filename of the output file
         """
         with open(filename, 'w') as f:
