@@ -24,7 +24,7 @@ class AngleClass:
         :param alphath: alpha parameter computed structure
         :param betath: beta parameter computed structure
         :param gammath: gamma parameter computed structure
-        :param n: TODO: fill this in
+        :param n: TODO: this parameter introduces the number 0 as a float
         :param filename_Ustar_experiment: filename of Ustar parameters of experimental ADPs
         :param filename_Ustar_theory: filename of Ustar parameters of theoretical ADPs
         :param ascal: TODO: fill this in
