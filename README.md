@@ -21,7 +21,7 @@ You will get three output files: Two of them will give you the main axis compone
 
 # Information about the Authors
 * D. Mroz (RWTH Aachen University)
-* Refactoring and changes to the code by J. George (Université Catholique de Louvain)
-* PI during the development of the code: R. Dronskowski, RWTH Aachen University
+* Refactoring and changes to the code by [J. George](https://jageo.github.io/) (Université Catholique de Louvain)
+* PI during the development of the code: [R. Dronskowski](http://www.ssc.rwth-aachen.de/), RWTH Aachen University
 
 
