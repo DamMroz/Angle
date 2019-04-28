@@ -130,7 +130,7 @@ class AngleClass:
         """
         with open(filename, 'w') as f:
             for dictionary in self.result_dicts:
-                if dictionary["Aexmax"] / dictionary["Aexmin"] > 1.8:
+                if dictionary["Aexmax"] / dictionary["Aexmin"] > 1.75:
                     print("Anisotropic", dictionary["atomname"], dictionary["Aexmax"] / dictionary["Aexmin"],
                           "Experiment1", dictionary["new_cexp1"], dictionary["wex"][0], "Experiment2",
                           dictionary["new_cexp2"], dictionary["wex"][1], "Experiment3", dictionary["new_cexp3"],
